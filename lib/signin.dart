@@ -124,7 +124,7 @@ class _SignInPageState extends State<SignInPage> {
                       }
                       Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (context) => GreenhouseDashboard()),
+                        MaterialPageRoute(builder: (context) =>Dashboard()),
                             (Route<dynamic> route) => false, // This removes all previous routes
                       );
             

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'signin.dart';
 import 'signup.dart';
+import 'developer_profile_page.dart';
+import 'help_support_page.dart'; // 👈 Make sure this file exists in lib/
 
 class HomePage extends StatelessWidget {
   @override
@@ -45,7 +47,9 @@ class HomePage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => SignInPage()));
+                    context,
+                    MaterialPageRoute(builder: (context) => SignInPage()),
+                  );
                 },
                 child: Text("Sign In"),
                 style: ElevatedButton.styleFrom(
@@ -63,11 +67,53 @@ class HomePage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => SignUpPage()));
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                  );
                 },
                 child: Text("Sign Up"),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orangeAccent,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  elevation: 5,
+                  shadowColor: Colors.black54,
+                ),
+              ),
+              SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DeveloperProfilePage()),
+                  );
+                },
+                child: Text("Developer Profile"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.brown.shade400,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  elevation: 5,
+                  shadowColor: Colors.black54,
+                ),
+              ),
+              SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HelpSupportPage()),
+                  );
+                },
+                child: Text("Help & Support"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightBlue.shade400,
                   foregroundColor: Colors.white,
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
